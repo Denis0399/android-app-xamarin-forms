@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App4.AppShell"  
+       xmlns:views="clr-namespace:App4.Views">
+    <TabBar >
+        <ShellContent Title="главная"
+                      ContentTemplate="{DataTemplate views:mainpage}">
+
+
+        </ShellContent>
+        <ShellContent Title="статус заказа"
+                      ContentTemplate="{DataTemplate views:checkorder}"
+                      >
+
+
+        </ShellContent>
+        <ShellContent Title="поиск"
+                      ContentTemplate="{DataTemplate views:search}"
+                      >
+
+
+        </ShellContent>
+        <ShellContent Title="отменить заказ"
+                      ContentTemplate="{DataTemplate views:cancelorder}"
+                      >
+
+
+        </ShellContent>
+    </TabBar>
+
+    <Shell.Resources>
+        <ResourceDictionary>
+            <Style x:Key="BaseStyle" TargetType="Element">
+                
+                <Setter Property="Shell.TabBarTitleColor" Value="White"/>
+                <Setter Property="Shell.TabBarUnselectedColor" Value="White"/>
+                <Setter Property="Shell.BackgroundColor" Value="LightSeaGreen"/>
+               
+            </Style>
+            <Style TargetType="TabBar" BasedOn="{StaticResource BaseStyle}" />
+           
+        </ResourceDictionary>
+    </Shell.Resources>
+</Shell>

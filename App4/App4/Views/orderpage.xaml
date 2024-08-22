@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App4.Views.orderpage"
+               BackgroundImageSource="sakura.jpg">
+    <StackLayout  HeightRequest="100"
+                       WidthRequest="600" 
+                 BackgroundColor="Aquamarine"  >
+
+        <Label    x:Name="booknamelabel"  TextColor="deeppink"></Label>
+        <Label    x:Name="pricelabel"  TextColor="deeppink"></Label>
+
+        <Label   x:Name="customername"    Text="введите имя" TextColor="deeppink"></Label>
+
+        <Editor TextChanged="ontextchanged"  x:Name="editorcustomername" BackgroundColor="White"></Editor>
+
+
+        <Label x:Name="labelcash" TextColor="deeppink" Text="наличными">
+            <Label.Triggers>
+                <DataTrigger TargetType="Label"
+                     Binding="{Binding Source={x:Reference checkboxcash}, Path=IsChecked}"
+                     Value="true">
+                   
+                </DataTrigger>
+            </Label.Triggers>
+        </Label>
+        <CheckBox   x:Name="checkboxcash" CheckedChanged="OnCheckBoxCheckedChanged" />
+        <Label  x:Name="labelcard" TextColor="deeppink" Text="картой при получении">
+            <Label.Triggers>
+                <DataTrigger TargetType="Label"
+                     Binding="{Binding Source={x:Reference checkboxcard}, Path=IsChecked}"
+                     Value="true">
+
+                </DataTrigger>
+            </Label.Triggers>
+        </Label>
+        <CheckBox x:Name="checkboxcard" CheckedChanged="OnCheckBoxCheckedChanged" />
+        <Label  x:Name="labeldelivery" TextColor="deeppink" Text="курьером">
+            <Label.Triggers>
+                <DataTrigger TargetType="Label"
+                     Binding="{Binding Source={x:Reference checkboxdelivery}, Path=IsChecked}"
+                     Value="true">
+
+                </DataTrigger>
+            </Label.Triggers>
+        </Label>
+        <CheckBox  x:Name="checkboxdelivery" CheckedChanged="OnCheckBoxCheckedChanged" />
+        <Label x:Name="labelself" TextColor="deeppink"  Text="самовывоз">
+            <Label.Triggers>
+                <DataTrigger TargetType="Label"
+                     Binding="{Binding Source={x:Reference checkboxself}, Path=IsChecked}"
+                     Value="true">
+
+                </DataTrigger>
+            </Label.Triggers>
+        </Label>
+        <CheckBox x:Name="checkboxself" CheckedChanged="OnCheckBoxCheckedChanged" />
+        <Label   x:Name="customeradress" Text="введите адресс" TextColor="deeppink"></Label>
+        <Editor x:Name="editorcustomeradress" TextChanged="ontextchanged"  BackgroundColor="White"></Editor>
+
+        <Button BackgroundColor="deeppink"  TextColor="White" Clicked="make_order"  x:Name="makeorder"  Text="оформить заказ"></Button>
+
+    </StackLayout>
+</ContentPage>

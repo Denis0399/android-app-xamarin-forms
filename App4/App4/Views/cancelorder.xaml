@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App4.Views.cancelorder"
+              BackgroundImageSource="sakura.jpg">
+    <StackLayout  >
+
+
+
+        <StackLayout HeightRequest="100"
+                       WidthRequest="600" 
+                 BackgroundColor="Aquamarine"  >
+
+            <Editor x:Name="ordernumbertextbox"></Editor>
+            <Button Clicked="cancelbutton_Clicked"  BackgroundColor="deeppink" Text="отмена заказа" TextColor="White" ></Button>
+        </StackLayout>
+
+        <StackLayout   BackgroundColor="Aquamarine"   HeightRequest="500"  >
+            <Label  x:Name="orderlabel1"  FontSize="16"  TextColor="deeppink" ></Label>
+            <Label x:Name="ordernumberlabel"   FontSize="16"  TextColor="deeppink"></Label>
+            <Label  x:Name="orderlabel2"  FontSize="16"  TextColor="deeppink" ></Label>
+        </StackLayout>
+
+
+
+
+    </StackLayout>
+
+
+  
+</ContentPage>

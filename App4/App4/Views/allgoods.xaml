@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App4.Views.allgoods"
+               BackgroundImageSource="sakura.jpg">
+    <StackLayout>
+        <StackLayout HeightRequest="70">
+            <ListView HasUnevenRows="True"  x:Name="genrelist">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Label Grid.Row="0" Text="жанр" TextColor="red" FontSize="20"></Label>
+                                <Label Grid.Row="1" Text="{Binding genrename} " TextColor="red" FontSize="20"></Label>
+
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+           
+        </StackLayout>
+        <StackLayout HeightRequest="70">
+            <ListView HasUnevenRows="True"  x:Name="genrelist2">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Label Grid.Row="0" Text="новые книги в жанре" TextColor="Red" FontSize="20"></Label>
+                                <Label Grid.Row="1" Text="{Binding genrename} " TextColor="red" FontSize="20"></Label>
+
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </StackLayout>
+
+        <StackLayout   BackgroundColor="aquamarine"  HeightRequest="500"  >
+
+
+            <ListView   HasUnevenRows="True"
+                 HeightRequest="300"
+                       WidthRequest="600" 
+                 x:Name="allgodsnewlist"
+                     BackgroundColor="aquamarine"      ItemTapped="OnItemTappedbook">
+                <ListView.ItemTemplate    >
+                    <DataTemplate>
+                        <ViewCell  Height="200">
+
+                            <Grid Padding="10" RowSpacing="15" ColumnSpacing="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image    Grid.Column="2" Source="{Binding ImageSource}" HeightRequest="100"  Aspect="AspectFit" HorizontalOptions="EndAndExpand" VerticalOptions="EndAndExpand"></Image>
+
+                                <Label  Grid.RowSpan="20"  Grid.Row="0" FontSize="15"  WidthRequest="100" Text="{Binding bookname} " TextColor="deeppink"></Label>
+                                <Label   Grid.RowSpan="20"    Grid.Row="1"  FontSize="14" Text="цена" TextColor="deeppink"></Label>
+                                <Label   Grid.RowSpan="20"    Grid.Row="2"   FontSize="14" Text="{Binding price}" TextColor="deeppink"></Label>
+                                <Label Grid.RowSpan="20"   Grid.Row="1"    FontSize="14" Grid.Column="1" Text="жанр " TextColor="deeppink"></Label>
+                                <Label   Grid.RowSpan="20" Grid.Row="2"  FontSize="14" Grid.Column="1" Text="{Binding genre} " TextColor="deeppink"></Label>
+                                <Label Grid.RowSpan="20"   Grid.Row="3"    FontSize="14" Grid.Column="1" Text="дата выхода  " TextColor="deeppink"></Label>
+                                <Label   Grid.RowSpan="20" Grid.Row="4"  FontSize="14" Grid.Column="1" Text="{Binding releasedate} " TextColor="deeppink"></Label>
+
+                            </Grid>
+
+
+
+                        </ViewCell>
+
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </StackLayout>
+        <StackLayout  HeightRequest="600"  >
+      
+
+        <ListView HasUnevenRows="True"   HorizontalOptions="FillAndExpand"
+                 HeightRequest="600"
+                       WidthRequest="600" 
+                 BackgroundColor="aquamarine" x:Name="allgoodspagelist" 
+                     ItemTapped="OnItemTappedbook">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell  Height="200">
+                        <Grid Padding="10" RowSpacing="15" ColumnSpacing="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                                <Image    Grid.Column="2" Source="{Binding ImageSource}" HeightRequest="100"  Aspect="AspectFit" HorizontalOptions="EndAndExpand" VerticalOptions="EndAndExpand"></Image>
+                                <Label  Grid.RowSpan="20"  Grid.Row="0" FontSize="15"  WidthRequest="100" Text="{Binding bookname} " TextColor="deeppink"></Label>
+                                <Label   Grid.RowSpan="20"    Grid.Row="1"  FontSize="14" Text="цена" TextColor="deeppink"></Label>
+                                <Label   Grid.RowSpan="20"    Grid.Row="2"   FontSize="14" Text="{Binding price}" TextColor="deeppink"></Label>
+                                <Label Grid.RowSpan="20"   Grid.Row="1"    FontSize="14" Grid.Column="1" Text="жанр " TextColor="deeppink"></Label>
+                                <Label   Grid.RowSpan="20" Grid.Row="2"  FontSize="14" Grid.Column="1" Text="{Binding genre} " TextColor="deeppink"></Label>
+                                <Label Grid.RowSpan="20"   Grid.Row="3"    FontSize="14" Grid.Column="1" Text="дата выхода  " TextColor="deeppink"></Label>
+                                <Label   Grid.RowSpan="20" Grid.Row="4"  FontSize="14" Grid.Column="1" Text="{Binding releasedate} " TextColor="deeppink"></Label>
+
+                            </Grid>
+
+
+
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+    </StackLayout>
+
+</ContentPage>

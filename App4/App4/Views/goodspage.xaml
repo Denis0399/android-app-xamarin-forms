@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App4.Views.goodspage"
+               BackgroundImageSource="sakura.jpg">
+    <StackLayout  HeightRequest="400"
+                       WidthRequest="600" 
+                 BackgroundColor="aquamarine"   HorizontalOptions="FillAndExpand">
+   
+
+                            <Image    Grid.Column="2" x:Name="imagenameshow" HeightRequest="150" WidthRequest="200" Aspect="AspectFit" Grid.RowSpan="5"></Image>
+        <Label Text="название книги"  Grid.Row="2"  FontSize="14"   TextColor="deeppink"></Label>
+        <Label   x:Name="booknamelabel"   Grid.Row="0" FontSize="14"  TextColor="deeppink"></Label>
+        <Label Text="цена книги "  Grid.Row="2"  FontSize="14"   TextColor="deeppink"></Label>
+        <Label    x:Name="pricelabel" Grid.Row="1"   FontSize="14" TextColor="deeppink"></Label>
+        <Label Text="жанр  книги"  Grid.Row="2"  FontSize="14"   TextColor="deeppink"></Label>
+        <Label  x:Name="genrelabel" Grid.Row="1"  FontSize="14"  TextColor="deeppink"></Label>
+        <Label Text="описание "  Grid.Row="2"  FontSize="14"   TextColor="deeppink"></Label>
+        <Label  x:Name="descriplabel"  Grid.Row="2"  FontSize="14"   TextColor="deeppink"></Label>
+        <Label Text="дата выхода "  Grid.Row="2"  FontSize="14"   TextColor="deeppink"></Label>
+        <Label  x:Name="releasedatelabel"  Grid.Row="2"  FontSize="14"   TextColor="deeppink"></Label>
+        <Button BackgroundColor="deeppink" Clicked="buy_Clicked" x:Name="buybutton" Text="офрмить заказ" TextColor="White"></Button>
+    </StackLayout>
+
+</ContentPage>

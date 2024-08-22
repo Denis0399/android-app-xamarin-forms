@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App4.Views.search"
+               BackgroundImageSource="sakura.jpg">
+    <ContentPage.Content>
+
+        <StackLayout   BackgroundColor="Aquamarine">
+
+
+
+            <StackLayout HeightRequest="100"
+                       WidthRequest="600" 
+                 BackgroundColor="Aquamarine"  >
+
+                <Editor BackgroundColor="Aquamarine" x:Name="searchname"></Editor>
+                <Button Clicked="searchbutton_Clicked"  BackgroundColor="deeppink" Text="поиск" TextColor="White" ></Button>
+            </StackLayout>
+
+
+
+            <StackLayout >
+                <ListView  HasUnevenRows="True"   HorizontalOptions="FillAndExpand"
+                 HeightRequest="600"
+                       WidthRequest="600" 
+                 BackgroundColor="Aquamarine" x:Name="searchlist"
+                             ItemTapped="OnItemTappedsearchpage">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell  Height="200">
+                                <Grid Padding="10" RowSpacing="15" ColumnSpacing="10">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Image    Grid.Column="2" Source="{Binding ImageSource}" HeightRequest="100"  Aspect="AspectFit" HorizontalOptions="EndAndExpand" VerticalOptions="EndAndExpand"></Image>
+                                    <Label  Grid.RowSpan="20"  Grid.Row="0" FontSize="15"  WidthRequest="100" Text="{Binding bookname} " TextColor="deeppink"></Label>
+                                    <Label   Grid.RowSpan="20"    Grid.Row="1"  FontSize="14" Text="цена" TextColor="deeppink"></Label>
+                                    <Label   Grid.RowSpan="20"    Grid.Row="2"   FontSize="14" Text="{Binding price}" TextColor="deeppink"></Label>
+                                    <Label Grid.RowSpan="20"   Grid.Row="1"    FontSize="14" Grid.Column="1" Text="жанр " TextColor="deeppink"></Label>
+                                    <Label   Grid.RowSpan="20" Grid.Row="2"  FontSize="14" Grid.Column="1" Text="{Binding genre} " TextColor="deeppink"></Label>
+                                    <Label Grid.RowSpan="20"   Grid.Row="3"    FontSize="14" Grid.Column="1" Text="дата выхода  " TextColor="deeppink"></Label>
+                                    <Label   Grid.RowSpan="20" Grid.Row="4"  FontSize="14" Grid.Column="1" Text="{Binding releasedate} " TextColor="deeppink"></Label>
+
+
+                                </Grid>
+
+
+
+
+                            </ViewCell>
+
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+
+
+        </StackLayout>
+
+
+    </ContentPage.Content>
+
+</ContentPage>

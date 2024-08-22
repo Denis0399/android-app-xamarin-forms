@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App4.Views.checkorder"
+              BackgroundImageSource="sakura.jpg">
+    <ContentPage.Content>
+
+        <StackLayout  >
+
+
+
+            <StackLayout HeightRequest="100"
+                       WidthRequest="600" 
+                 BackgroundColor="Aquamarine"  >
+
+                <Editor x:Name="ordernumbertextbox"></Editor>
+                <Button Clicked="ourderbutton_Clicked"  BackgroundColor="deeppink" Text="проверить статус заказа" TextColor="White" > </Button>
+            </StackLayout>
+
+            <StackLayout   BackgroundColor="Aquamarine"  HeightRequest="500"  >
+                <Label   x:Name="ifwrongnumberlabel"  FontSize="20" TextColor="deeppink"></Label>
+                <Label   x:Name="ordernumberlabel" TextColor="deeppink"></Label>
+                <Label    x:Name="ordernumberlabelshow"  TextColor="deeppink"></Label>
+                <Label    x:Name="booknamelabel" TextColor="deeppink"></Label>
+                <Label    x:Name="booknamelabelshow"  TextColor="deeppink"></Label>
+                <Label     x:Name="pricelabel"  TextColor="deeppink"></Label>
+                <Label    x:Name="pricelabelshow"  TextColor="deeppink"></Label>
+                <Label    x:Name="customernamelabel" TextColor="deeppink"></Label>
+                <Label   x:Name="customernamelabelshow"    TextColor="deeppink"></Label>
+
+                <Label   x:Name="customeradresslabel"  TextColor="deeppink"></Label>
+                <Label   x:Name="customeradresslabelshow" TextColor="deeppink"></Label>
+                <Label    x:Name="deliverymethodlabel" TextColor="deeppink"></Label>
+                <Label   x:Name="deliverymethodlabelshow" TextColor="deeppink"></Label>
+                <Label    x:Name="paymentmethodlabel" TextColor="deeppink"></Label>
+                <Label   x:Name="paymentmethodlabelshow" TextColor="deeppink"></Label>
+                <Label   x:Name="orderstatuslabel" TextColor="deeppink"></Label>
+                <Label   x:Name="orderstatuslabelshow" TextColor="deeppink"></Label>
+
+
+            </StackLayout>
+
+
+
+         
+        </StackLayout>
+
+
+    </ContentPage.Content>
+</ContentPage>

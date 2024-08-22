@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App4.Views.orderconfirmation"
+               BackgroundImageSource="sakura.jpg">
+    <StackLayout  HeightRequest="100"
+                       WidthRequest="600" 
+                 BackgroundColor="Aquamarine"  >
+        <Label   Text="номер заказа" TextColor="deeppink"></Label>
+        <Label    x:Name="ordernumberlabel"  TextColor="deeppink"></Label>
+        <Label   Text="название товара" TextColor="deeppink"></Label>
+        <Label    x:Name="booknamelabel"  TextColor="deeppink"></Label>
+        <Label   Text="цена товара" TextColor="deeppink"></Label>
+        <Label    x:Name="pricelabel"  TextColor="deeppink"></Label>
+        <Label   Text="имя заказчика" TextColor="deeppink"></Label>
+        <Label   x:Name="customernamelabel"    TextColor="deeppink"></Label>
+
+        <Label  x:Name="customeradresslabelshow"   TextColor="deeppink"></Label>
+        <Label   x:Name="customeradresslabel" TextColor="deeppink"></Label>
+        <Label   Text="способ получения" TextColor="deeppink"></Label>
+        <Label   x:Name="deliverymethodlabel" TextColor="deeppink"></Label>
+        <Label   Text="способ полаты " TextColor="deeppink"></Label>
+        <Label   x:Name="paymentmethodlabel" TextColor="deeppink"></Label>
+        <Label   Text="статус заказа " TextColor="deeppink"></Label>
+        <Label   x:Name="orderstatuslabel" TextColor="deeppink"></Label>
+
+        <Button BackgroundColor="deeppink" TextColor="White" Clicked="home"  Text="на главную "></Button>
+
+    </StackLayout>
+</ContentPage>
